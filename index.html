@@ -15,15 +15,19 @@
             overflow: hidden;
             transition: width 0.5s;
         }
+
         .graph.show {
             width: 600px;
         }
+
         .graph-scale {
             display: none;
         }
+
         .graph.show .graph-scale {
             display: block;
         }
+
         .skill-button {
             padding: 5px 10px;
             background-color: #007bff;
@@ -33,21 +37,44 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .skill-button:hover {
             background-color: #0056b3;
         }
+
         /* Responsive Styles */
         @media screen and (max-width: 768px) {
             .graph {
                 width: 100%;
             }
+
             .graph.show {
                 width: 100%;
             }
+
             .skill-button {
                 display: block;
                 width: 100%;
                 margin-bottom: 10px;
+            }
+
+            .dash-panel {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+            .menu-button.active {
+                background-color: #0056b3;
             }
         }
     </style>
@@ -60,15 +87,18 @@
             <h5 class="nm">UDAYKIRAN S L</h5>
             <p class="jb">Fresher</p>
         </div>
-        <nav class="nv">
-            <ul>
+        <nav class="navbar">
+            <a href="#" class="navbar-brand">My Portfolio</a>
+            <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+            <ul class="navbar-nav" id="navbar-nav">
                 <li><a href="#Details">Details</a></li>
                 <li><a href="#Education">Education</a></li>
-                <li><a href="#Technical Skills">Technical Skills</a></li>
+                <li><a href="#TechnicalSkills">Technical Skills</a></li>
                 <li><a href="#Project">Project</a></li>
             </ul>
         </nav>
     </header>
+    
 
     <section class="Details" id="Details">
         <h1 class="heading"><span>My Portfolio</span></h1>
@@ -77,7 +107,7 @@
                 <h3><span>Name: </span>UDAYKIRAN S L</h3>
                 <h3><span>Email: </span>udaykiransl07@gmail.com</h3>
                 <h3><span>Phone_no: </span>7259629026</h3>
-                <h3><span>Address: </span>Ballari,Karnataka</h3>
+                <h3><span>Address: </span>Ballari, Karnataka</h3>
             </div>
         </div>
     </section>
@@ -93,19 +123,19 @@
             </tr>
             <tr>
                 <td>SSLC</td>
-                <td>Swamy Vivekananda Public High School,Sriramnagar</td>
+                <td>Swamy Vivekananda Public High School, Sriramnagar</td>
                 <td>KSEEB</td>
                 <td>82.24</td>
             </tr>
             <tr>
                 <td>PUC</td>
-                <td>Nalanda PU College,Bellary </td>
+                <td>Nalanda PU College, Bellary</td>
                 <td>Department of PUE</td>
                 <td>70.83</td>
             </tr>
             <tr>
                 <td>B.E</td>
-                <td>RYMEC,Bellary</td>
+                <td>RYMEC, Bellary</td>
                 <td>VTU</td>
                 <td>75.43</td>
             </tr>
@@ -174,17 +204,19 @@
         <h1 class="heading"><span>Project</span></h1>
         <div class="Row">
             <div class="det">
-                <h3><span>Title: </span>Earth Air Tube Heat Exchanger (Final Year Project)</h3>
-                <h3><span>Description: </span>Earth air heat exchanger or earth tube heat exchanger is a device used to
+                <h3><span><b>Title:</b> </span>Earth Air Tube Heat Exchanger (Final Year Project)</h3>
+                <h3><span><b>Description:</b> </span>Earth air heat exchanger or earth tube heat exchanger is a device used to
                     produce heating effects in winter and cooling effects in summer using the ground or soil as a source
                     or sink. </h3><br><br>
-                <h3><span>Title: </span>A Stand-Alone Application Of Implementation Of Linear Data Structures</h3>
-                <h3><span>Description: </span>This Project Concentrates On the Implementation of Linear Data Structures
-                    Like Array,Stack,Queue,Circular Queue,Singly Linked List,doubly Linked List.The Main agenda of the
-                    project is to showcase the operations and working of different linear data structures.</h3>
+                <h3><span><b>Title:</b> </span>A Stand-Alone Application Of Implementation Of Linear Data Structures</h3>
+                <h3><span><b>Description:</b> </span>This Project Concentrates On the Implementation of Linear Data Structures
+                    Like Array, Stack, Queue, Circular Queue, Singly Linked List, Doubly Linked List. The Main agenda of
+                    the project is to showcase the operations and working of different linear data structures.</h3>
             </div>
         </div>
     </section>
+
+    
 
     <script>
         function showGraph(button, percentage) {
@@ -192,6 +224,19 @@
             graph.classList.add('show');
             graph.innerHTML = '<div style="width: ' + percentage + '%; height: 100%; background-color: green;"></div><span>' + percentage + '%</span>';
         }
+
+        function toggleDashPanel() {
+            var dashPanel = document.querySelector('.dash-panel');
+            var menuButton = document.querySelector('.menu-button');
+            dashPanel.classList.toggle('active');
+            menuButton.classList.toggle('active');
+        }
+
+        function toggleMenu() {
+                var navbar = document.getElementById('navbar-nav');
+                navbar.classList.toggle('active');
+            }
+
     </script>
 </body>
 
