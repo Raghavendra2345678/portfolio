@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="sty.css">
-    <style>
+    <meta charset="UTF-8"
+<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <link rel="stylesheet" href="sty.css">
+       <style>
         .graph {
             width: 0;
             height: 16px;
@@ -27,7 +26,7 @@
         .graph.show .graph-scale {
             display: block;
         }
-
+        
         .skill-button {
             padding: 5px 10px;
             background-color: #007bff;
@@ -41,205 +40,149 @@
         .skill-button:hover {
             background-color: #0056b3;
         }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            .graph {
-                width: 100%;
-            }
-
-            .graph.show {
-                width: 100%;
-            }
-
-            .skill-button {
-                display: block;
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .dash-panel {
-                display: none;
-            }
-
-            .menu-button {
-                display: block;
-                background-color: #007bff;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 5px 10px;
-                margin-bottom: 10px;
-                cursor: pointer;
-            }
-
-            .menu-button.active {
-                background-color: #0056b3;
-            }
-        }
-    </style>
+        </style>
+       
 </head>
-
 <body>
     <header>
-        <div class="user">
-            <img src="Uday%20Photo%20neww%20(2).jpg">
-            <h5 class="nm">UDAYKIRAN S L</h5>
-            <p class="jb">Fresher</p>
-        </div>
-        <nav class="navbar">
-            <a href="#" class="navbar-brand">My Portfolio</a>
-            <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-            <ul class="navbar-nav" id="navbar-nav">
-                <li><a href="#Details">Details</a></li>
-                <li><a href="#Education">Education</a></li>
-                <li><a href="#TechnicalSkills">Technical Skills</a></li>
-                <li><a href="#Project">Project</a></li>
-            </ul>
-        </nav>
+       <div class="user">
+       <img src="Uday%20Photo%20neww%20(2).jpg">                
+       <h5 class="nm">UDAYKIRAN S L</h5>
+       <p class="jb">Fresher</p>
+       </div>
+       <nav class="nv">
+          <ul>
+             <li><a href="#Details">Details</a></li>
+             <li><a href="#Education">Education</a></li>
+             <li><a href="#Technical Skills">Technical Skills</a></li>
+             <li><a href="#Project">Project</a></li>
+          </ul>
+       </nav>
     </header>
-    
-
     <section class="Details" id="Details">
         <h1 class="heading"><span>My Portfolio</span></h1>
         <div class="Row">
-            <div class="det">
-                <h3><span><b>Name:</b> </span>UDAYKIRAN S L</h3>
-                <h3><span><b>Email:</b> </span>udaykiransl07@gmail.com</h3>
-                <h3><span><b>Phone_no:</b> </span>7259629026</h3>
-                <h3><span><b>Address:</b> </span>Ballari, Karnataka</h3>
-                <h3><b>Linkedin Profile: </b><a href="https://www.linkedin.com/in/udaykiran-s-l-54ab7424b">Linkedin</a></h3>
-                <h3><b>Github Profile: </b><a href="https://github.com/Uday0707kiran">Github</a></h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="Education" id="Education">
-        <h1 class="title"><span>Education</span></h1><br><br><br>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Name of the institute</th>
-                <th>University</th>
-                <th>Percentage</th>
-            </tr>
-            <tr>
-                <td>SSLC</td>
-                <td>Swamy Vivekananda Public High School, Sriramnagar, Gangavathi</td>
-                <td>KSEEB</td>
-                <td>82.24</td>
-            </tr>
-            <tr>
-                <td>PUC</td>
-                <td>Nalanda PU College, Bellary</td>
-                <td>Department of PUE</td>
-                <td>70.83</td>
-            </tr>
-            <tr>
-                <td>B.E</td>
-                <td>RYMEC, Bellary</td>
-                <td>VTU</td>
-                <td>75.43</td>
-            </tr>
-        </table>
-    </section>
-
-    <br><br><br><br><br><br>
-
-    <section class="Technical Skills" id="Technical Skills">
-        <h1 class="head"><span>Technical Skills</span></h1>
-        <div>
-            <ul id="lis">
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 80)">Java</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 85)">HTML</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 90)">CSS</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 85)">Oracle SQL</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 75)">MY SQL</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 75)">JDBC</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 65)">Data Structures</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="Project" id="Project">
-        <h1 class="heading"><span>Project</span></h1>
-        <div class="Row">
-            <div class="det">
-                <h3><span><b>Title:</b> </span>Earth Air Tube Heat Exchanger (Final Year Project)</h3>
-                <h3><span><b>Description:</b> </span>Earth air heat exchanger or earth tube heat exchanger is a device used to
-                    produce heating effects in winter and cooling effects in summer using the ground or soil as a source
-                    or sink. </h3><br><br>
-                <h3><span><b>Title:</b> </span>A Stand-Alone Application Of Implementation Of Linear Data Structures</h3>
-                <h3><span><b>Description:</b> </span>This Project Concentrates On the Implementation of Linear Data Structures
-                    Like Array, Stack, Queue, Circular Queue, Singly Linked List, Doubly Linked List. The Main agenda of
-                    the project is to showcase the operations and working of different linear data structures.</h3>
-            </div>
-        </div>
-    </section>
-
+        <div class="det">
+             <h3><span><b>Name:</b> </span>UDAYKIRAN S L</h3>
+             
     
+             <h3><span><b>Email:</b> </span>udaykiransl07@gmail.com</h3>
+             <h3><span><b>Phone_no:</b></span>7259629026</h3>
+<h3><span><b>Address:</b> </span>Ballari,Karnataka</h3>
+<h3><b>Linkedin Profile: </b><a href="https://www.linkedin.com/in/udaykiran-s-l-54ab7424b">Linkedin</a></h3>
+<h3><b>Github Profile: </b><a href="https://github.com/Uday0707kiran">Github</a></h3>
+        </div>
+    </div>
+    </section>
+<section class="Education" id="Education">
+    <h1 class="title"><span>Education</span></h1><br><br><br>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Name of the institute</th>
+            <th>University</th>
+            <th>Percentage</th>
+        </tr>
+        <tr>
+            <td>SSLC</td>
+            <td>Swamy Vivekananda Public High School,Sriramnagar</td>
+            <td>KSEEB</td>
+            <td>82.24</td>
+        </tr>
+        <tr>
+            <td>PUC</td>
+            <td>Nalanda PU College,Bellary </td>
+            <td>Department of PUE</td>
+            <td>70.83</td>
+        </tr>
+        <tr>
+            <td>B.E</td>
+            <td>RYMEC,Bellary</td>
+            <td>VTU</td>
+            <td>75.43</td>
+        </tr>
+    </table>
+</section>
+<br><br><br><br><br><br>
+<section class="Technical Skills" id="Technical Skills">
+    <h1 class="head"><span>Technical Skills</span></h1>
+    <div>
+    <ul id="lis">
+       
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 80)">Java</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+            <br><br>
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 85)">HTML</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+            <br><br>
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 90)">CSS</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+            <br><br>
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 85)">Oracle SQL</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+            <br><br>
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 75)">MY SQL</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+            <br><br>
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 75)">JDBC</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+            <br><br>
+            <li>
+                <button class="skill-button" onclick="showGraph(this, 65)">Data Structures</button>
+                <div class="graph">
+                    <div class="graph-scale"></div>
+                </div>
+            </li>
+    </ul>
+</div>
+</section>
+<section class="Project" id="Project">
+    <h1 class="heading"><span>Project</span></h1>
+    <div class="Row">
+        <div class="det">
+   
+    <h3><span><b>Title:</b> </span>Earth Air Tube Heat Exchanger (Final Year Project)</h3>
+    <h3><span><b>Description:</b></span>Earth air heat exchanger or earth tube heat exchanger is a device used to produce heating effects in winter and cooling effects in summer using the ground or soil as a source or sink. </h3><br><br>
+           
+          <h3><span><b>Title:</b>  </span>A Stand-Alone Application Of Implementation Of Linear
+Data Structures</h3>
+            <h3><span><b>Description:</b> </span>This Project Concentrates On the Implementation of Linear Data Structures Like 
+Array,Stack,Queue,Circular Queue,Singly Linked List,doubly Linked List.The Main agenda of the project is to showcase the operations and working of 
+different linear data structures.</h3>
+            </div>
+</div>
+</section>
 
-    <script>
-        function showGraph(button, percentage) {
-            var graph = button.nextElementSibling;
-            graph.classList.add('show');
-            graph.innerHTML = '<div style="width: ' + percentage + '%; height: 100%; background-color: green;"></div><span>' + percentage + '%</span>';
-        }
-
-        function toggleDashPanel() {
-            var dashPanel = document.querySelector('.dash-panel');
-            var menuButton = document.querySelector('.menu-button');
-            dashPanel.classList.toggle('active');
-            menuButton.classList.toggle('active');
-        }
-
-        function toggleMenu() {
-                var navbar = document.getElementById('navbar-nav');
-                navbar.classList.toggle('active');
-            }
-
+<script>
+    function showGraph(button, percentage) {
+        var graph = button.nextElementSibling;
+        graph.classList.add('show');
+        graph.innerHTML = '<div style="width: ' + percentage + '%; height: 100%; background-color: green;"></div><span>' + percentage + '%</span>';
+    }
     </script>
 </body>
-
 </html>
