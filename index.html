@@ -7,25 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="sty.css">
     <style>
-        .graph {
-            width: 0;
-            height: 16px;
-            background-color: beige;
-            margin-bottom: 5px;
-            overflow: hidden;
-            transition: width 0.5s;
-        }
-
-        .graph.show {
-            width: 600px;
-        }
-
-        .graph-scale {
-            display: none;
-        }
-
-        .graph.show .graph-scale {
-            display: block;
+        .graph-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
         }
 
         .skill-button {
@@ -39,43 +24,28 @@
         }
 
         .skill-button:hover {
-            background-color: #0056b3;
+            background-color: #00b351;
         }
 
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            .graph {
-                width: 100%;
-            }
+        .skill-button.active {
+            background-color: #00b351;
+        }
 
-            .graph.show {
-                width: 100%;
-            }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
-            .skill-button {
-                display: block;
-                width: 100%;
-                margin-bottom: 10px;
-            }
+        .skills-list {
+            margin-right: 650px;
+        }
 
-            .dash-panel {
-                display: none;
-            }
-
-            .menu-button {
-                display: block;
-                background-color: #007bff;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                padding: 5px 10px;
-                margin-bottom: 10px;
-                cursor: pointer;
-            }
-
-            .menu-button.active {
-                background-color: #0056b3;
-            }
+        .chart-container {
+            margin-top: 10px;
+            position: relative;
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
@@ -87,33 +57,29 @@
             <h5 class="nm">UDAYKIRAN S L</h5>
             <p class="jb">Fresher</p>
         </div>
-        <nav class="navbar">
-            <a href="#" class="navbar-brand">My Portfolio</a>
-            <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-            <ul class="navbar-nav" id="navbar-nav">
+        <nav class="nv">
+            <ul>
                 <li><a href="#Details">Details</a></li>
                 <li><a href="#Education">Education</a></li>
-                <li><a href="#TechnicalSkills">Technical Skills</a></li>
+                <li><a href="#Technical Skills">Technical Skills</a></li>
                 <li><a href="#Project">Project</a></li>
             </ul>
         </nav>
     </header>
-    
-
     <section class="Details" id="Details">
         <h1 class="heading"><span>My Portfolio</span></h1>
         <div class="Row">
             <div class="det">
                 <h3><span><b>Name:</b> </span>UDAYKIRAN S L</h3>
                 <h3><span><b>Email:</b> </span>udaykiransl07@gmail.com</h3>
-                <h3><span><b>Phone_no:</b> </span>7259629026</h3>
-                <h3><span><b>Address:</b> </span>Ballari, Karnataka</h3>
-                <h3><b>Linkedin Profile: </b><a href="https://www.linkedin.com/in/udaykiran-s-l-54ab7424b">Linkedin</a></h3>
+                <h3><span><b>Phone_no:</b></span>7259629026</h3>
+                <h3><span><b>Address:</b> </span>Ballari,Karnataka</h3>
+                <h3><b>Linkedin Profile: </b><a href="https://www.linkedin.com/in/udaykiran-s-l-54ab7424b">Linkedin</a>
+                </h3>
                 <h3><b>Github Profile: </b><a href="https://github.com/Uday0707kiran">Github</a></h3>
             </div>
         </div>
     </section>
-
     <section class="Education" id="Education">
         <h1 class="title"><span>Education</span></h1><br><br><br>
         <table>
@@ -125,120 +91,153 @@
             </tr>
             <tr>
                 <td>SSLC</td>
-                <td>Swamy Vivekananda Public High School, Sriramnagar, Gangavathi</td>
+                <td>Swamy Vivekananda Public High School,Sriramnagar,Gangavathi</td>
                 <td>KSEEB</td>
                 <td>82.24</td>
             </tr>
             <tr>
                 <td>PUC</td>
-                <td>Nalanda PU College, Bellary</td>
+                <td>Nalanda PU College,Bellary</td>
                 <td>Department of PUE</td>
                 <td>70.83</td>
             </tr>
             <tr>
                 <td>B.E</td>
-                <td>RYMEC, Bellary</td>
+                <td>RYMEC,Bellary</td>
                 <td>VTU</td>
                 <td>75.43</td>
             </tr>
         </table>
     </section>
-
     <br><br><br><br><br><br>
-
-    <section class="Technical Skills" id="Technical Skills">
+    <section class="TechnicalSkills" id="TechnicalSkills">
         <h1 class="head"><span>Technical Skills</span></h1>
-        <div>
-            <ul id="lis">
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 80)">Java</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 85)">HTML</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 90)">CSS</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 85)">Oracle SQL</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 75)">MY SQL</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 75)">JDBC</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-                <br><br>
-                <li>
-                    <button class="skill-button" onclick="showGraph(this, 65)">Data Structures</button>
-                    <div class="graph">
-                        <div class="graph-scale"></div>
-                    </div>
-                </li>
-            </ul>
+        <div class="skills-container">
+            <div class="skills-list">
+                <ul id="skillsList">
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(0)">Java</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(1)">HTML</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(2)">CSS</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(3)">Oracle SQL</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(4)">MySQL</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(5)">JDBC</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(6)">Data Structures</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="chart-container">
+                <canvas id="skillsChart" width="200" height="200"></canvas>
+                <div id="skillPercentage" style="text-align: center; margin-top: 10px;"></div>
+            </div>
         </div>
     </section>
-
+    </section>
     <section class="Project" id="Project">
         <h1 class="heading"><span>Project</span></h1>
         <div class="Row">
             <div class="det">
                 <h3><span><b>Title:</b> </span>Earth Air Tube Heat Exchanger (Final Year Project)</h3>
-                <h3><span><b>Description:</b> </span>Earth air heat exchanger or earth tube heat exchanger is a device used to
+                <h3><span><b>Description:</b> </span>Earth air heat exchanger or earth tube heat exchanger is a device
+                    used
+                    to
                     produce heating effects in winter and cooling effects in summer using the ground or soil as a source
                     or sink. </h3><br><br>
-                <h3><span><b>Title:</b> </span>A Stand-Alone Application Of Implementation Of Linear Data Structures</h3>
-                <h3><span><b>Description:</b> </span>This Project Concentrates On the Implementation of Linear Data Structures
+                <h3><span><b>Title:</b> </span>A Stand-Alone Application Of Implementation Of Linear Data Structures
+                </h3>
+                <h3><span><b>Description:</b> </span>This Project Concentrates On the Implementation of Linear Data
+                    Structures
                     Like Array, Stack, Queue, Circular Queue, Singly Linked List, Doubly Linked List. The Main agenda of
                     the project is to showcase the operations and working of different linear data structures.</h3>
             </div>
         </div>
     </section>
 
-    
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        function showGraph(button, percentage) {
-            var graph = button.nextElementSibling;
-            graph.classList.add('show');
-            graph.innerHTML = '<div style="width: ' + percentage + '%; height: 100%; background-color: green;"></div><span>' + percentage + '%</span>';
-        }
+        var skillsChart;
+        var skillButtons;
+        var skillPercentages = [80, 85, 90, 85, 75, 75, 70];
 
-        function toggleDashPanel() {
-            var dashPanel = document.querySelector('.dash-panel');
-            var menuButton = document.querySelector('.menu-button');
-            dashPanel.classList.toggle('active');
-            menuButton.classList.toggle('active');
-        }
-
-        function toggleMenu() {
-                var navbar = document.getElementById('navbar-nav');
-                navbar.classList.toggle('active');
+        function highlightSkill(skillIndex) {
+            // Remove the "active" class from all buttons
+            for (var i = 0; i < skillButtons.length; i++) {
+                skillButtons[i].classList.remove("active");
             }
 
+            // Add the "active" class to the clicked button
+            skillButtons[skillIndex].classList.add("active");
+
+            // Display the skill percentage
+            var skillPercentageElement = document.getElementById("skillPercentage");
+            skillPercentageElement.innerText = "Skill Percentage: " + skillPercentages[skillIndex] + "%";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            skillsChart = new Chart(document.getElementById("skillsChart").getContext("2d"), {
+                type: 'doughnut',
+                data: {
+                    labels: ["Java", "HTML", "CSS", "Oracle SQL", "MySQL", "JDBC", "Data Structures"],
+                    datasets: [{
+                        data: skillPercentages,
+                        backgroundColor: [
+                            "#007bff",
+                            "#00b351",
+                            "#ff8800",
+                            "#9900ff",
+                            "#ff0066",
+                            "#00cc66",
+                            "#ffbb33"
+                        ],
+                        borderWidth: 0,
+                    }],
+                },
+                options: {
+                    responsive: true,
+                    cutoutPercentage: 80,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    animation: {
+                        animateRotate: false
+                    },
+                    tooltips: {
+                        enabled: false
+                    },
+                    onClick: function (event, elements) {
+                        if (elements.length > 0) {
+                            var clickedIndex = elements[0].index;
+
+                            // Call the highlightSkill function passing the clicked index
+                            highlightSkill(clickedIndex);
+                        }
+                    }
+                }
+            });
+
+            skillButtons = document.getElementsByClassName("skill-button");
+        });
     </script>
 </body>
 

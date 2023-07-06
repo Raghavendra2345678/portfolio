@@ -262,32 +262,38 @@ table {
     cursor: pointer;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
+    .graph {
+        width: 100%;
+    }
+
+    .graph.show {
+        width: 100%;
+    }
+
+    .skill-button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .dash-panel {
+        display: none;
     }
 
     .menu-button {
         display: block;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
     }
 
-    .navbar-nav {
-        display: none;
-        flex-direction: column;
-        padding-left: 0;
-        margin-top: 10px;
-        color:aquamarine;
-    }
-
-    .navbar-nav li {
-        margin: 0;
-    }
-
-    .navbar-nav li a {
-        padding: 10px;
-    }
-
-    .navbar-nav.active {
-        display: flex;
+    .menu-button.active {
+        background-color: #0056b3;
     }
 }
