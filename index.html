@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,7 @@
             width: 200px;
             height: 200px;
         }
-
+        
         .skill-button {
             padding: 5px 10px;
             background-color: #007bff;
@@ -49,7 +48,6 @@
         }
     </style>
 </head>
-
 <body>
     <header>
         <div class="user">
@@ -169,76 +167,30 @@
                     Like Array, Stack, Queue, Circular Queue, Singly Linked List, Doubly Linked List. The Main agenda of
                     the project is to showcase the operations and working of different linear data structures.</h3>
             </div>
-        </div>
-    </section>
+</div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+
     <script>
-        var skillsChart;
-        var skillButtons;
-        var skillPercentages = [80, 85, 90, 85, 75, 75, 70];
-
-        function highlightSkill(skillIndex) {
-            // Remove the "active" class from all buttons
-            for (var i = 0; i < skillButtons.length; i++) {
-                skillButtons[i].classList.remove("active");
-            }
-
-            // Add the "active" class to the clicked button
-            skillButtons[skillIndex].classList.add("active");
-
-            // Display the skill percentage
-            var skillPercentageElement = document.getElementById("skillPercentage");
-            skillPercentageElement.innerText = "Skill Percentage: " + skillPercentages[skillIndex] + "%";
+        function showGraph(button, percentage) {
+            var graph = button.nextElementSibling;
+            graph.classList.add('show');
+            graph.innerHTML = '<div style="width: ' + percentage + '%; height: 100%; background-color: green;"></div><span>' + percentage + '%</span>';
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
-            skillsChart = new Chart(document.getElementById("skillsChart").getContext("2d"), {
-                type: 'doughnut',
-                data: {
-                    labels: ["Java", "HTML", "CSS", "Oracle SQL", "MySQL", "JDBC", "Data Structures"],
-                    datasets: [{
-                        data: skillPercentages,
-                        backgroundColor: [
-                            "#007bff",
-                            "#00b351",
-                            "#ff8800",
-                            "#9900ff",
-                            "#ff0066",
-                            "#00cc66",
-                            "#ffbb33"
-                        ],
-                        borderWidth: 0,
-                    }],
-                },
-                options: {
-                    responsive: true,
-                    cutoutPercentage: 80,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    animation: {
-                        animateRotate: false
-                    },
-                    tooltips: {
-                        enabled: false
-                    },
-                    onClick: function (event, elements) {
-                        if (elements.length > 0) {
-                            var clickedIndex = elements[0].index;
+        function toggleDashPanel() {
+            var dashPanel = document.querySelector('.dash-panel');
+            var menuButton = document.querySelector('.menu-button');
+            dashPanel.classList.toggle('active');
+            menuButton.classList.toggle('active');
+        }
 
-                            // Call the highlightSkill function passing the clicked index
-                            highlightSkill(clickedIndex);
-                        }
-                    }
-                }
-            });
+        function toggleMenu() {
+                var navbar = document.getElementById('navbar-nav');
+                navbar.classList.toggle('active');
+            }
 
-            skillButtons = document.getElementsByClassName("skill-button");
-        });
     </script>
 </body>
-
 </html>
