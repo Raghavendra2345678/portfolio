@@ -296,4 +296,16 @@ table {
     .menu-button.active {
         background-color: #0056b3;
     }
+
+    .navbar-nav li {
+        margin: 0;
+    }
+
+    .navbar-nav li a {
+        padding: 10px;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
 }
