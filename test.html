@@ -4,37 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="sty.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="tsty.css">
     <style>
-        .graph.show {
-            width: 600px;
-        }
-
-
-        .graph.show .graph-scale {
-            display: block;
-        }
-
-        .skill-button {
-            padding: 5px 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .skill-button:hover {
-            background-color: #0056b3;
-        }
-
-        
         .graph-container {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 200px;
+            height: 200px;
         }
 
         .skill-button {
@@ -51,24 +27,38 @@
             background-color: #00b351;
         }
 
-        .highlight-section {
-    background-color: #ff6c49 !important; /* Highlight color */
-}
+        .skill-button.active {
+            background-color: #00b351;
+        }
 
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .skills-list {
+            margin-right: 650px;
+        }
+
+        .chart-container {
+            margin-top: 10px;
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <div class="user">
-            <img src="Uday%20Photo%20neww%20(2).jpg">
+            <img src="Uday%20Photo%20neww%20(2).jpg" alt="User Photo">
             <h5 class="nm">UDAYKIRAN S L</h5>
             <p class="jb">Fresher</p>
         </div>
-        <nav class="navbar">
-            <a href="#" class="navbar-brand">My Portfolio</a>
-            <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-            <ul class="navbar-nav" id="navbar-nav">
+        <nav class="nv">
+            <ul>
                 <li><a href="#Details">Details</a></li>
                 <li><a href="#Education">Education</a></li>
                 <li><a href="#TechnicalSkills">Technical Skills</a></li>
@@ -82,69 +72,101 @@
             <div class="det">
                 <h3><span><b>Name:</b> </span>UDAYKIRAN S L</h3>
                 <h3><span><b>Email:</b> </span>udaykiransl07@gmail.com</h3>
-                <h3><span><b>Phone_no:</b> </span>7259629026</h3>
+                <h3><span><b>Phone_no:</b></span>7259629026</h3>
                 <h3><span><b>Address:</b> </span>Ballari, Karnataka</h3>
-                <h3><b>Linkedin Profile: </b><a href="https://www.linkedin.com/in/udaykiran-s-l-54ab7424b">Linkedin</a></h3>
+                <h3><b>LinkedIn Profile: </b><a href="https://www.linkedin.com/in/udaykiran-s-l-54ab7424b">Linkedin</a>
+                </h3>
                 <h3><b>Github Profile: </b><a href="https://github.com/Uday0707kiran">Github</a></h3>
             </div>
         </div>
     </section>
-    
     <section class="Education" id="Education">
-        <h1 class="title"><span>Education</span></h1><br><br><br>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Name of the institute</th>
-                <th>University</th>
-                <th>Percentage</th>
-            </tr>
-            <tr>
-                <td>SSLC</td>
-                <td>Swamy Vivekananda Public High School, Sriramnagar, Gangavathi</td>
-                <td>KSEEB</td>
-                <td>82.24</td>
-            </tr>
-            <tr>
-                <td>PUC</td>
-                <td>Nalanda PU College, Bellary</td>
-                <td>Department of PUE</td>
-                <td>70.83</td>
-            </tr>
-            <tr>
-                <td>B.E</td>
-                <td>RYMEC, Bellary</td>
-                <td>VTU</td>
-                <td>75.43</td>
-            </tr>
-        </table>
+        <h1 class="title"><span>Education</span></Here's the continuation of the HTML code: ```html </h1>
+            <br><br><br>
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Name of the institute</th>
+                    <th>University</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>SSLC</td>
+                    <td>Swamy Vivekananda Public High School, Sriramnagar, Gangavathi</td>
+                    <td>KSEEB</td>
+                    <td>82.24</td>
+                </tr>
+                <tr>
+                    <td>PUC</td>
+                    <td>Nalanda PU College, Bellary</td>
+                    <td>Department of PUE</td>
+                    <td>70.83</td>
+                </tr>
+                <tr>
+                    <td>B.E</td>
+                    <td>RYMEC, Bellary</td>
+                    <td>VTU</td>
+                    <td>75.43</td>
+                </tr>
+            </table>
     </section>
-    
     <br><br><br><br><br><br>
-    <section class="Technical Skills" id="TechnicalSkills">
+    <section class="TechnicalSkills" id="TechnicalSkills">
         <h1 class="head"><span>Technical Skills</span></h1>
-        <div class="graph-container">
-            <button class="skill-button" id="javaButton" onclick="highlightSkill('java')">Java</button>
-            <button class="skill-button" id="htmlButton" onclick="highlightSkill('html')">HTML</button>
-            <button class="skill-button" id="cssButton" onclick="highlightSkill('css')">CSS</button>
-            <button class="skill-button" id="oracleButton" onclick="highlightSkill('oraclesql')">Oracle SQL</button>
-            <button class="skill-button" id="mysqlButton" onclick="highlightSkill('mysql')">MySQL</button>
-            <button class="skill-button" id="jdbcButton" onclick="highlightSkill('jdbc')">JDBC</button>
-            <button class="skill-button" id="dsaButton" onclick="highlightSkill('dsa')">Data Structures</button>
+        <div class="skills-container">
+            <div class="skills-list">
+                <ul id="skillsList">
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(0)">Java</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(1)">HTML</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(2)">CSS</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(3)">Oracle SQL</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(4)">MySQL</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(5)">JDBC</button>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="skill-button" onclick="highlightSkill(6)">Data Structures</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="chart-container">
+                <canvas id="skillsChart" width="200" height="200"></canvas>
+                <div id="skillPercentage" style="text-align: center; margin-top: 10px;"></div>
+            </div>
         </div>
-
-
     </section>
     <section class="Project" id="Project">
         <h1 class="heading"><span>Project</span></h1>
         <div class="Row">
             <div class="det">
                 <h3><span><b>Title:</b> </span>Earth Air Tube Heat Exchanger (Final Year Project)</h3>
-                <h3><span><b>Description:</b> </span>Earth air heat exchanger or earth tube heat exchanger is a device used
+                <h3><span><b>Description:</b> </span>Earth air heat exchanger or earth tube heat exchanger is a device
+                    used
                     to
                     produce heating effects in winter and cooling effects in summer using the ground or soil as a source
                     or sink. </h3><br><br>
-                <h3><span><b>Title:</b> </span>A Stand-Alone Application Of Implementation Of Linear Data Structures</h3>
+                <h3><span><b>Title:</b> </span>A Stand-Alone Application Of Implementation Of Linear Data Structures
+                </h3>
+                Here's the final part of the HTML code:
+
+                ```html
                 <h3><span><b>Description:</b> </span>This Project Concentrates On the Implementation of Linear Data
                     Structures
                     Like Array, Stack, Queue, Circular Queue, Singly Linked List, Doubly Linked List. The Main agenda of
@@ -152,29 +174,45 @@
             </div>
         </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        function showGraph() {
-                var ctx = document.getElementById("skillsChart").getContext("2d");
-                var chart = new Chart(ctx, {
-                    type: "doughnut",
+        var skillsChart;
+            var skillButtons;
+            var skillPercentages = [80, 85, 90, 85, 75, 75, 70];
+
+            function highlightSkill(skillIndex) {
+                // Remove the "active" class from all buttons
+                for (var i = 0; i < skillButtons.length; i++) {
+                    skillButtons[i].classList.remove("active");
+                }
+
+                // Add the "active" class to the clicked button
+                skillButtons[skillIndex].classList.add("active");
+
+                // Display the skill percentage
+                var skillPercentageElement = document.getElementById("skillPercentage");
+                skillPercentageElement.innerText = "Skill Percentage: " + skillPercentages[skillIndex] + "%";
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                skillsChart = new Chart(document.getElementById("skillsChart"), {
+                    type: 'doughnut',
                     data: {
                         labels: ["Java", "HTML", "CSS", "Oracle SQL", "MySQL", "JDBC", "Data Structures"],
-                        datasets: [
-                            {
-                                data: [80, 85, 90, 85, 75, 75, 70],
-                                backgroundColor: [
-                                    "#007bff",
-                                    "#dc3545",
-                                    "#ffc107",
-                                    "#28a745",
-                                    "#ff6c49",
-                                    "#6f42c1",
-                                    "#17a2b8"
-                                ],
-                                borderWidth: 0
-                            }
-                        ]
+                        datasets: [{
+                            data: skillPercentages,
+                            backgroundColor: [
+                                "#007bff",
+                                "#00b351",
+                                "#ff8800",
+                                "#9900ff",
+                                "#ff0066",
+                                "#00cc66",
+                                "#ffbb33"
+                            ],
+                            borderWidth: 0
+                        }]
                     },
                     options: {
                         responsive: true,
@@ -188,38 +226,21 @@
                             animateRotate: false
                         },
                         tooltips: {
-                            callbacks: {
-                                label: function (tooltipItem, data) {
-                                    var dataset = data.datasets[tooltipItem.datasetIndex];
-                                    var total = dataset.data.reduce(function (previousValue, currentValue) {
-                                        return previousValue + currentValue;
-                                    });
-                                    var currentValue = dataset.data[tooltipItem.index];
-                                    var percentage = Math.floor((currentValue / total) * 100 + 0.5);
-                                    return percentage + "%";
-                                }
+                            enabled: false
+                        },
+                        onClick: function (event, elements) {
+                            if (elements.length > 0) {
+                                var clickedIndex = elements[0].index;
+
+                                // Call the highlightSkill function passing the clicked index
+                                highlightSkill(clickedIndex);
                             }
                         }
                     }
                 });
-            }
 
-            function highlightSkill(skill) {
-                var chart = Chart.getChart("skillsChart");
-                var datasetIndex = 0; // Assuming the dataset index is 0
-                var activePoints = chart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
-                if (activePoints.length > 0) {
-                    var index = activePoints[0].index;
-                    var meta = chart.getDatasetMeta(datasetIndex);
-                    var section = meta.data[index];
-                    if (section) {
-                        section.custom = section.custom || {};
-                        section.custom.backgroundColor = '#ff6c49'; // Highlight color
-                    }
-                    chart.update();
-                }
-            }
-
+                skillButtons = document.getElementsByClassName("skill-button");
+            });
     </script>
 </body>
 
