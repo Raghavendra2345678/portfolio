@@ -1,145 +1,212 @@
 /* sty.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
 }
 
 .user {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .nm {
-    margin: 0;
-    color: #fff;
+  margin: 0;
+  color: #fff;
 }
 
 .jb {
-    margin: 0;
-    color: #ccc;
+  margin: 0;
+  color: #ccc;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 nav li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 nav li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .Details,
 .Education,
 .TechnicalSkills,
 .Project {
-    padding: 20px;
+  padding: 20px;
 }
 
 .heading {
-    text-align: center;
+  text-align: center;
 }
 
 .Row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .det {
-    width: 100%;
-    max-width: 800px;
+  width: 100%;
+  max-width: 800px;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 10px;
-    text-align: left;
+  padding: 10px;
+  text-align: left;
 }
 
 th {
-    background-color: #f5f5f5;
-    font-weight: bold;
+  background-color: #f5f5f5;
+  font-weight: bold;
 }
 
 .TechnicalSkills {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .title {
-    text-align: center;
+  text-align: center;
 }
 
 .head {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .chart-container {
-    margin-top: 20px;
-    text-align: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 10px;
+  }
+
+  .user img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .nm {
+    font-size: 16px;
+  }
+
+  .jb {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav li a {
+    font-size: 14px;
+  }
+
+  .Details,
+  .Education,
+  .TechnicalSkills,
+  .Project {
+    padding: 10px;
+  }
+
+  .det {
+    max-width: none;
+  }
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .user img {
-        width: 30px;
-        height: 30px;
-        margin-right: 5px;
-    }
+  .skills-list,
+  .chart-container {
+    width: 100%;
+  }
+}
 
-    .nm {
-        font-size: 16px;
-    }
+@media (max-width: 480px) {
+  .user img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
 
-    .jb {
-        font-size: 14px;
-    }
+  .nm {
+    font-size: 14px;
+  }
 
-    nav li a {
-        font-size: 14px;
-    }
+  .jb {
+    font-size: 12px;
+  }
 
-    .Details,
-    .Education,
-    .TechnicalSkills,
-    .Project {
-        padding: 10px;
-    }
+  nav {
+    flex-direction: column;
+  }
 
-    .det {
-        max-width: none;
-    }
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav li a {
+    font-size: 12px;
+  }
+
+  .Details,
+  .Education,
+  .TechnicalSkills,
+  .Project {
+    padding: 10px;
+  }
+
+  .det {
+    max-width: none;
+  }
 }

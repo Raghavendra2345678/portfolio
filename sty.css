@@ -1,311 +1,271 @@
-* {
-    padding: 0;
-    margin: 0;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-}
-
+/* sty.css */
+body,
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-body {
-    background-color: white;
-    overflow: hidden;
-    padding-left: 35rem;
+* {
+  box-sizing: border-box;
+}
+
+.navbar-brand{
+  font-family: serif;
+}
+
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.salim {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nm {
+  margin: 0;
+  color: #fff;
+}
+
+.jb {
+  margin: 0;
+  color: #ccc;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Details,
+.Education,
+.TechnicalSkills,
+.Project {
+  padding: 20px;
 }
 
 .heading {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 4rem;
-    padding-top: 6rem;
-    border-bottom: 0.1rem solid #ddd;
-    color: #333;
+  text-align: center;
+  color:#054f66;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
-.heading span {
-    color: #007bff;
+
+.Row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.det {
+  width: 100%;
+  max-width: 800px;
+  border: 5px dotted #ccc;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.sbj {
+  font-size: 20px;
+}
+
+
+
+.tabled {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabled td,
+.tabled th {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+.tabled th {
+  background-color: darkblue;
+  color: #ffffff;
+}
+
+.tabled tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.TechnicalSkills {
+  background-color: #f5f5f5;
 }
 
 .title {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 4rem;
-    padding-top: 6rem;
-    border-bottom: 0.1rem solid #ddd;
-    color: #333;
+  text-align: center;
+  color:#054f66;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
-.title span {
-    color: #007bff;
+.udri {
+  font-family: cursive;
 }
 
 .head {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 4rem;
-    padding-top: 5rem;
-    border-bottom: 0.1rem solid #ddd;
-    color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.head span {
-    color:#007bff;;
+.chart-container {
+  margin-top: 20px;
+  text-align: center;
 }
 
-.pro {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 4rem;
-    padding-top: 5rem;
-    border-bottom: 0.1rem solid #ddd;
-    color: #333;
+.user img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 
-.pro span {
-    color: #ffc107;
+.nm {
+  font-size: 16px;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 100%;
-    width: 35rem;
-    background: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
+.jb {
+  font-size: 14px;
 }
 
-header .user img {
-    height: 13rem;
-    width: 13rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 0.5rem solid;
+nav li a {
+  font-size: 14px;
 }
 
-header .user .nm {
-    font-size: 2rem;
-    color: #fff;
+
+.det {
+  max-width: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  overflow-x: hidden;
 }
 
-header .user .jb {
-    font-size: 1rem;
-    color: #fff;
+.gotopbtn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: #27ae60;
+  bottom: 40px;
+  right: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
 }
 
-header .nv {
-    width: 100%;
+.container{
+  display:flow-root;
+  width: 110px;
+  max-width: 1150px;
+  margin: 0 auto;
+  column-gap:20px;
 }
 
-header .nv ul {
-    list-style: none;
-    padding: 1rem;
+.row{
+    position: relative;
+  display: flex;
+  transform: translate(25% -25%);
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
 }
 
-header .nv ul li a {
+.card{
+  flex:1 1 21rem;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 15px rgba(0,0,0,4);
+  align-self: normal;
+  transition: all 0.3s;
+  /* -webkit-filter: blur(5px);
+  filter: blur(5px); */
+  
+
+}
+
+.card:hover{
+  transform: scale(1.15);
+  /* /* -webkit-filter: blur(0px);
+  filter: blur(0); */
+   
+}
+
+
+.uday{
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 10px;
+}
+
+.Internship {
+  margin-top:20px;
+}
+@media (max-width: 768px) {
+
+  .intro{
     display: block;
-    padding: 1rem;
-    margin: 1.5rem 0;
-    background: #333;
-    color: #fff;
-    font-size: 2rem;
-    border-radius: 5rem;
-    text-decoration: none;
+  }
+
+ 
+
+  #skillsChart {
+    display: block;
 }
 
-header .nv ul li a:hover {
-    background-color: black;
-}
+  .det {
+    display: block;
+  
+  }
+  
 
-.Details .Row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-}
-
-.Details .Row .det {
-    flex: 1 1 48rem;
-    padding: 2rem 1rem;
-    padding-left: 8rem;
-}
-
-.Details .Row .det h3 {
-    font-size: 2rem;
-    color: black;
-    padding: 1rem 0;
-    font-weight: normal;
-}
-
-.Details .Row .det h3 span {
-    color: black;
-    padding: 0 0.5rem;
-}
-
-table,
-th,
-td {
-    border: 1px solid #ffc107;
-    border-collapse: collapse;
-}
-
-td {
-    color: #333;
-    padding: 1rem;
-}
-
-th {
-    color: #333;
-    padding: 1rem;
-}
-
-table {
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 2rem;
-    padding: 1rem;
-    border-bottom: 0.1rem solid #ddd;
-    color: #333;
-}
-
-#lis li {
-    margin: 0 9rem;
-    color: #333;
-    font-size: medium;
-    padding: 0.5rem 1rem;
-}
-
-.Project .Row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 3rem 0;
-}
-
-.Project .Row .det {
-    flex: 1 1 48rem;
-    padding: 2rem 1rem;
-    padding-left: 8rem;
-}
-
-.Project .Row .det h3 {
-    font-size: 2rem;
-    color: black;
-    padding: 1rem 0;
-    font-weight: normal;
-}
-
-.Project .Row .det h3 span {
-    color: black;
-    font-style: bold;
-    padding: 0 0.5rem;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: grey;
-    color: #fff;
+  header {
     padding: 10px;
-}
+  }
 
-.navbar-brand {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-}
+  nav {
+    margin-top: 10px;
+  }
 
-.navbar-nav {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-.navbar-nav li {
-    margin-left: 10px;
-}
+  main {
+    padding: 10px;
+  }
 
-.navbar-nav li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.navbar-nav li a:hover {
-    background-color: #0056b3;
-}
-
-.active {
-    background-color: #0056b3;
-}
-
-.menu-button {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .graph {
-        width: 100%;
-    }
-
-    .graph.show {
-        width: 100%;
-    }
-
-    .skill-button {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .dash-panel {
-        display: none;
-    }
-
-    .menu-button {
-        display: block;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 5px 10px;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
-
-    .menu-button.active {
-        background-color: #0056b3;
-    }
-
-    .navbar-nav li {
-        margin: 0;
-    }
-
-    .navbar-nav li a {
-        padding: 10px;
-    }
-
-    .navbar-nav.active {
-        display: flex;
-    }
+  footer {
+    padding: 10px;
+  }
 }
